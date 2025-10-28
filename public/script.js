@@ -4,7 +4,6 @@ document.getElementById('botForm').addEventListener('submit', async function (e)
     const formData = new FormData(this);
     const data = Object.fromEntries(formData.entries());
   
-    // Limpa as mensagens anteriores
     document.getElementById('response').innerHTML = '';
   
     try {
@@ -18,7 +17,6 @@ document.getElementById('botForm').addEventListener('submit', async function (e)
   
       const statusMessages = await response.json();
   
-      // Exibe todas as mensagens de status
       statusMessages.forEach(message => {
         const p = document.createElement('p');
         p.textContent = message;
@@ -31,4 +29,5 @@ document.getElementById('botForm').addEventListener('submit', async function (e)
       document.getElementById('response').appendChild(p);
     }
   });
+
   
