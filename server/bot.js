@@ -1,6 +1,5 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 
-// Função que inicializa o bot e envia as mensagens
 async function iniciarBot(token, guildId, quantidade, delayEmSegundos, mensagem, callback) {
   const client = new Client({
     intents: [
@@ -45,3 +44,4 @@ async function iniciarBot(token, guildId, quantidade, delayEmSegundos, mensagem,
 }
 
 module.exports = iniciarBot;
+
